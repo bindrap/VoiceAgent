@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceAgent</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; media-src 'self' blob: data:; connect-src 'self';">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="status-bar">
+                <div id="health-dots">
+                    <span class="dot" id="dot-stt" title="STT"></span>
+                    <span class="dot" id="dot-llm" title="LLM"></span>
+                    <span class="dot" id="dot-tts" title="TTS"></span>
+                </div>
+                <div class="badges">
+                    <div id="backend-badge" class="badge hidden">Cloud</div>
+                    <select id="persona-select" class="select" title="Persona"></select>
+                </div>
+            </div>
+            <h1>VoiceAgent</h1>
+        </header>
+
+        <main>
+            <div id="conversation-log" class="log" aria-live="polite"></div>
+
+            <div id="confirm-banner" class="banner hidden">
+                <p id="confirm-text">Do you want to proceed?</p>
+                <div class="confirm-btns">
+                    <button id="btn-deny" class="btn-danger">No</button>
+                    <button id="btn-confirm" class="btn-success">Yes</button>
+                </div>
+                <small>Or just say yes / no.</small>
+            </div>
+
+            <div class="controls">
+                <form id="text-form" autocomplete="off">
+                    <input id="text-input" type="text" placeholder="Type instead of talking...">
+                    <button type="submit" class="btn-secondary">Send</button>
+                </form>
+                <div id="level-meter" class="meter"><div id="level-fill" class="fill"></div></div>
+                <button id="btn-mic" class="mic-btn">
+                    <span id="mic-icon">🎤</span>
+                    <span id="mic-label">Hold to Talk</span>
+                </button>
+                <div class="row">
+                    <select id="mic-select" class="select" title="Microphone"></select>
+                    <button id="btn-stop-audio" class="btn-secondary">Stop audio</button>
+                    <button id="btn-end" class="btn-secondary">End session</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

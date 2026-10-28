@@ -1,0 +1,7 @@
+requests>=2.31
+python-dotenv>=1.0
+numpy>=1.26
+sounddevice>=0.4.6
+soundfile>=0.12
+fastapi>=0.110.0
+uvicorn[standard]>=0.30.0

@@ -1,0 +1,32 @@
+{
+  "friend": {
+    "aliases": ["friend", "buddy", "bro", "therapist", "therapy", "talk"],
+    "keywords": ["feel", "feeling", "anxious", "anxiety", "stressed", "vent", "rain", "relationship", "argument", "sad", "angry", "lonely", "worried", "advice", "what do you think"],
+    "patterns": ["\\bi('m| am) (so )?(tired|upset|overwhelmed|stuck)\\b", "\\bcan we talk\\b"]
+  },
+  "finance": {
+    "aliases": ["finance", "money", "financial", "banker", "budget"],
+    "keywords": ["portfolio", "tfsa", "rrsp", "ibkr", "invest", "investing", "stock", "stocks", "etf", "net worth", "budget", "spent", "spending", "paycheque", "paycheck", "savings", "balance", "owe", "owed", "dividend", "holdings"],
+    "patterns": ["\\bhow much (did i|have i) (spend|spent)\\b", "\\bperfin\\b"]
+  },
+  "work": {
+    "aliases": ["work", "job", "ticket", "tickets", "amanda", "servicenow"],
+    "keywords": ["ticket", "amanda", "servicenow", "pbi", "mel", "avery", "brian", "jacques", "yellowfin", "staging", "update set", "mtp", "chg", "bfsp", "citizen portal"],
+    "patterns": ["\\b(TASK|STRY|INC|RITM|STSK|CHG)\\d{4,}\\b"]
+  },
+  "server_ops": {
+    "aliases": ["server", "nanak", "ops", "devops", "docker", "sysadmin"],
+    "keywords": ["docker", "container", "containers", "nanak", "server", "logs", "syncthing", "immich", "jellyfin", "caddy", "tailscale", "nextcloud", "disk space", "backup", "uptime", "restart"],
+    "patterns": ["\\bis (\\w+) (running|up|down)\\b"]
+  },
+  "notes": {
+    "aliases": ["notes", "note", "scribe", "dictate", "journal"],
+    "keywords": ["note", "jot", "remind", "log", "write down", "daily note", "add to my"],
+    "patterns": ["\\b(note|jot|write) (this|that|down)\\b", "\\blog (this|that)\\b", "\\badd (this |that )?to (my )?(daily )?note"]
+  },
+  "coach": {
+    "aliases": ["coach", "trainer", "gym", "fitness", "jits"],
+    "keywords": ["gym", "workout", "lift", "lifting", "squat", "bench", "deadlift", "jits", "bjj", "jiu-jitsu", "jiu jitsu", "training", "sore", "recovery", "protein", "cardio"],
+    "patterns": ["\\bwhat should i (train|lift|work out)\\b"]
+  }
+}

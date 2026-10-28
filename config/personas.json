@@ -1,0 +1,79 @@
+{
+  "friend": {
+    "description": "Casual conversation, venting, life talk, relationships, decisions. Knows me, Rain, and my goals.",
+    "prompt": "friend",
+    "protocol": "actions",
+    "local_only": true,
+    "context_files": [
+      "Parteek.md",
+      "Rain/Rain.md",
+      "Rain/Rain+Me.md",
+      "Parteek/Goals.md",
+      "Parteek/Thoughts.md",
+      "Parteek/Therapy.md",
+      "Parteek/Personal.md"
+    ],
+    "recent_daily": 7,
+    "tools": ["list_notes", "search_notes", "read_note", "note_append"],
+    "writable": ["Rain/Rain+Me.md", "Parteek.md", "Parteek/Thoughts.md", "Parteek/Goals.md"]
+  },
+  "finance": {
+    "description": "Money, spending, portfolio, TFSA/RRSP, budget, net worth. Reads Investments.md and the Perfin database.",
+    "prompt": "finance",
+    "protocol": "actions",
+    "local_only": true,
+    "context_files": [
+      "Parteek.md",
+      "Investments.md",
+      "Parteek/Finances.md",
+      "Parteek/Perfin.md",
+      "Parteek/TFSA.md",
+      "Parteek/money_owed.md"
+    ],
+    "recent_daily": 3,
+    "tools": ["sql", "list_notes", "search_notes", "read_note", "note_append"],
+    "writable": ["Investments.md", "Parteek/Finances.md", "Parteek/money_owed.md"]
+  },
+  "work": {
+    "description": "Work tickets and tasks: AMANDA, ServiceNow, Citizen Portal. Ticket status, what to tackle, notes.",
+    "prompt": "work",
+    "protocol": "actions",
+    "local_only": true,
+    "context_files": ["Work/WorkAgent.md"],
+    "recent_daily": 5,
+    "tools": ["list_notes", "search_notes", "read_note", "note_append"],
+    "writable": ["Work/ServiceNow/*.md", "Work/ServiceNow/*/*.md", "Work/AMANDA/TASK/*.md", "Work/AMANDA/TASK/*/*.md"]
+  },
+  "server_ops": {
+    "description": "Nanak home server: Docker containers, services, logs, disk, backups, Syncthing, Immich, Caddy.",
+    "prompt": "server_ops",
+    "protocol": "actions",
+    "local_only": true,
+    "context_files": ["Nanak/NanakServerGuide.md", "Nanak/ServerInventory.md"],
+    "nanak_only_files": ["Nanak/NanakAgent.md"],
+    "recent_daily": 2,
+    "tools": ["shell", "list_notes", "search_notes", "read_note", "note_append"],
+    "writable": ["Nanak/NanakServerGuide.md"]
+  },
+  "notes": {
+    "description": "Dictate a note, idea, task, or timestamped log entry into today's daily note.",
+    "prompt": "notes",
+    "protocol": "actions",
+    "local_only": true,
+    "context_files": [],
+    "recent_daily": 3,
+    "tools": ["note_append", "list_notes", "search_notes", "read_note"],
+    "writable": []
+  },
+  "coach": {
+    "description": "Gym, jiu-jitsu, training, recovery, health habits and fitness goals.",
+    "prompt": "coach",
+    "protocol": "actions",
+    "local_only": true,
+    "context_files": ["Parteek.md", "Parteek/Health.md", "Parteek/Goals.md"],
+    "recent_daily": 3,
+    "recent_dirs": [{"dir": "gym", "n": 6}, {"dir": "jits/journal", "n": 6}],
+    "tools": ["list_notes", "search_notes", "read_note", "note_append"],
+    "writable": ["Parteek/Health.md", "Parteek/Goals.md"]
+  }
+}
